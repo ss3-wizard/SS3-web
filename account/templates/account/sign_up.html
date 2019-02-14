@@ -1,0 +1,7 @@
+<p>회원가입 페이지</p>
+
+<form action="{% url 'account:sign_up' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
