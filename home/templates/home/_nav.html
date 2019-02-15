@@ -1,0 +1,43 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-flex flex-column align-items-stretch p-0 bg-dark">
+    <div class="d-flex justify-content-between p-2">
+        <div class="d-flex">
+            <a href="{% url 'home:index' %}" class="navbar-brand text-light">SS3-Wizard</a>
+        </div>
+        <div class="d-flex">
+            <form action="#" class="form-inline">
+                <input type="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="d-block">
+        <div class="d-flex flex-column text-light ">
+            <div class="d-flex flex-row px-1 menes">
+                <div class="d-inline">메뉴1</div>
+                <div class="d-inline">메뉴2</div>
+            </div>
+            <div class="menu-sub flex-row">
+                <div class="d-flex flex-column">
+                    <div class="menu">메뉴1-1</div>
+                    <div class="menu">메뉴1-2</div>
+                    <div class="menu">메뉴1-3</div>
+                    <div class="menu">메뉴1-4</div>
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="menu">메뉴1-1</div>
+                    <div class="menu">메뉴1-2</div>
+                    <div class="menu">메뉴1-3</div>
+                    <div class="menu">메뉴1-4</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header d-flex justify-content-center align-items-center">
+            <h1 class="text-light">test test</h1>
+        </div>
+
+    </div>
+
+</nav>
