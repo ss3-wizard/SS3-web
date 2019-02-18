@@ -5,16 +5,63 @@
 }
 
 .menus {
-    width: 300px;
-    height: 100px;
-
+    width: 100%;
 }
 
 .menu-sub {
     display: none;
     background: black;
+    height: 0px;
 }
 
-div.menus:hover > div.menu-sub {
+@keyframes menu-slide-down {
+    from {
+        height: 0;
+    }
+    to {
+        height: 250px;
+    }
+}
+
+@keyframes menu-slide-up {
+    from {
+        height: 250px;
+    }
+    to {
+        height: 0;
+    }
+}
+
+.menus:hover {
+    height: 0;
+}
+
+.menus:hover + .menu-sub {
     display: flex;
+    height: 250px;
+    animation-name: menu-slide-down;
+    animation-duration: 1s;
+}
+
+.menus:hover ~ .header {
+    height: 0px;
+    animation-name: menu-slide-up;
+    animation-duration: 1s;
+}
+
+.menus:hover ~ .header * {
+    display: none;
+}
+
+.menu-sub:hover {
+    display: flex;
+    height: 250px;
+}
+
+.menu-sub:hover ~ .header {
+    height: 0px;
+}
+
+.menu-sub:hover ~ .header * {
+    display: none;
 }
