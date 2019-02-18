@@ -1,0 +1,41 @@
+/* This is css for sign_up.html */
+.sign_up.wrapper>.header {
+    position: relative;
+    top: 20vh;
+    /*display: inline-block;*/
+    width: 100%;
+    text-align: center;
+    font-size: 3.3vw;
+}
+
+.signup {
+    border-width: 0;
+}
+
+.sign_up.wrapper>form {
+    width: 300px;
+    margin: 20vh auto 20vh;
+}
+
+.signup>.userPw1 input, .signup>.userPw2 input, .signup>.userId input {
+    width: 100%
+}
+
+.signup>.userId, .signup>.userPw1, .signup>.userPw2 {
+    margin-top: 30px;
+}
+
+.signup.form.button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.signup p {
+    color: red;
+    font-size: 11px;
+    margin: 8px 0;
+}
+/* */
+

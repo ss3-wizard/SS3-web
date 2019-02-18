@@ -6,7 +6,7 @@ from .forms import SignupForm
 
 # Create your views here.
 def index(request):
-    return render(request, 'account/test_index.html')
+    return render(request, 'account/index.html')
 
 
 def sign_in(request):
@@ -33,13 +33,14 @@ def sign_out(request):
 def sign_up(request):
     if request.method == "POST":
         form = SignupForm(request.POST)
+        # form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
             return redirect('account:index')
     else:
         form = SignupForm()
-
+        # form = UserCreationForm()
     return render(request, 'account/sign_up.html', {
         'form': form,
     })
