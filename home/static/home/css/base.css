@@ -1,41 +1,7 @@
-.bg-black * {
+body > .container {
+    min-height: 100vh;
+}
+
+.bg-black, .bg-black * {
     background: #2c2c2c;
-}
-
-.menus {
-    width: 100%;
-}
-
-.menus > div {
-    height: 50px;
-}
-
-.menu-sub {
-    height: 0px;
-    transition: 1s;
-}
-
-.header{
-    width: 100%;
-    height: 250px;
-    transition: 1s;
-    overflow: hidden;
-    background: url("../images/header.jpg") no-repeat center;
-}
-
-.header * {
-    background: unset;
-}
-
-.menu {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid black;
-}
-
-.menu-sub > div {
-    width: 100%;
-    overflow: hidden;
 }

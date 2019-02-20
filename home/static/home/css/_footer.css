@@ -1,0 +1,15 @@
+footer {
+    height: 80px;
+}
+
+.top-button {
+    display: none;
+    margin: 0 3vw 2vh 92vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+.top-button * {
+    width: 100%;
+    height: 100%;
+}
