@@ -30,3 +30,23 @@ class SignupForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'password1', 'password2')
+
+
+class SigninForm(AuthenticationForm):
+    error_messages = {
+        'invalid_login': '아이디 또는 비밀번호를 다시 확인하세요\n등록되지 않은 아이디이거나, 아이디 또는 비밀번호를 잘못 입력하셨습니다'
+    }
+    username= forms.CharField(
+        widget=forms.TextInput(attrs={'placeholder': '아이디'}),
+        error_messages={
+            'required': '아이디를 입력해주세요',
+            'invalid': '아이디 또는 비밀번호를 다시 확인하세요\n등록되지 않은 아이디이거나, 아이디 또는 비밀번호를 잘못 입력하셨습니다'
+        }
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={'placeholder': '비밀번호'}),
+        error_messages={
+            'required': '비밀번호를 입력해주세요',
+            'invalid': '아이디 또는 비밀번호를 다시 확인하세요\n등록되지 않은 아이디이거나, 아이디 또는 비밀번호를 잘못 입력하셨습니다'
+        }
+    )

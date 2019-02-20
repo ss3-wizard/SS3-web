@@ -3,12 +3,12 @@
 {% block body %}
     <div class="sign_up wrapper">
         <div class="header">
-            <strong>SS3-Wizard</strong>
+            <strong>WIZARD</strong>
         </div>
         <form action="{% url 'account:sign_up' %}" method="POST">
             {% csrf_token %}
             <fieldset class="signup">
-                <div class="userId">
+                <div class="userNm">
                     <div><label for="{{ form.username_for_label }}"><strong>아이디</strong></label></div>
                     <div>{{ form.username }}</div>
                 </div>
