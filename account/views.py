@@ -18,10 +18,13 @@ def sign_in(request):
             login(request, form.get_user())
             if request.GET.get('next'):
                 return redirect(request.GET.get('next'))
+            else:
+                if request.user.is_authenticated:
+                    return redirect('account:index')
     else:
         form = SigninForm()
     return render(request, 'account/sign_in.html', {
-        'form': form
+        'form': form,
     })
 
 
@@ -35,7 +38,7 @@ def sign_up(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('account:index')
     else:
         form = SignupForm()

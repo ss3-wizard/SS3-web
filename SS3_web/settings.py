@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'home',
     'account',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +67,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -103,6 +106,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+SOCIAL_AUTH_URL_NAMESPACE ='social'
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL ='/'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '44110419367-68o4o1l9knsm6l4nnqresel1dbg02q7b.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'hZv2dTc8mIbjBHOWflvJmERj'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/

@@ -1,15 +1,19 @@
-{% extends 'account/base.html' %}
+{% extends 'home/base.html' %}
 {% load static %}
 {% block body %}
-    <div class="sign-up">
-        <a href="{% url 'account:sign_up' %}">회원가입하기</a>
-    </div>
-    <div class="sign-in">
-        <a href="{% url 'account:sign_in' %}">로그인하기</a>
-    </div>
-    <div class="sign-out">
-        <a href="{% url 'account:sign_out' %}">로그아웃하기</a>
-    </div>
+    {% if user.is_active %}
+        <div class="sign-out">
+            <p>{{ user.username }}님 안녕하세요</p>
+            <a href="{% url 'account:sign_out' %}">로그아웃하기</a>
+        </div>
+    {% else %}
+        <div class="sign-in">
+            <a href="{% url 'account:sign_in' %}">로그인하기</a>
+        </div>
+        <div class="sign-up">
+            <a href="{% url 'account:sign_up' %}">회원가입하기</a>
+        </div>
+    {% endif %}
 {% endblock %}
 
 
