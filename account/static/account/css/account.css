@@ -1,0 +1,81 @@
+/* css for sign_up */
+.wrapper.sign_up {
+    margin: 10vh auto;
+    width: 300px;
+}
+
+.header.sign_up {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: -20px;
+}
+
+fieldset.sign_up {
+    margin: 5vh auto;
+}
+
+fieldset.sign_up input {
+    width: 100%;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    height: 50px;
+}
+
+fieldset.sign_up p {
+    color: red;
+    font-size: 12px;
+    margin: 0;
+}
+
+fieldset.sign_up label {
+    margin-top: 30px;
+}
+
+/* css for sign_in */
+.wrapper.sign_in {
+    margin: 20vh auto;
+    width: 500px;
+}
+
+.header.sign_in {
+    text-align: center;
+    font-size: 55px;
+}
+
+fieldset.sign_in input {
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+}
+
+.form.input.sign_in>input {
+    margin-top: 10px;
+}
+
+fieldset.sign_in p {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.add_sign_in>.btn.sign_in {
+    width: 245px;
+    height: 74px;
+    margin-top: 16px;
+    font-size: 18px;
+    margin-right: 7px;
+}
+
+.google_btn {
+    padding: 0;
+    border-color: transparent;
+    background: transparent;
+    margin-top: 12px;
+    width: 245px;
+    height: 76px;
+}
+
+.google_btn>img {
+    width: 245px;
+    height: 76px;
+}
