@@ -4,9 +4,13 @@ footer {
 
 .top-button {
     display: none;
-    margin: 0 3vw 2vh 92vw;
+    margin: 0 30px 2vh auto;
     width: 5vw;
     height: 5vw;
+    max-width: 50px;
+    min-width: 30px;
+    max-height: 50px;
+    min-height: 30px;
 }
 
 .top-button * {
