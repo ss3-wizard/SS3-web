@@ -6,10 +6,10 @@ from django.contrib.auth.models import User
 class SignupForm(UserCreationForm):
     username = forms.RegexField(max_length=20,
                                 min_length=5,
-                                regex=r"^[가-힣a-zA-Z0-9]+$",
+                                regex=r"^[a-zA-Z0-9]+$",
                                 help_text="아이디를 입력해주세요",
                                 error_messages={
-                                    'invalid': "5~20자의 영문, 한글, 숫자만 사용 가능합니다."
+                                    'invalid': "5~20자의 영문, 숫자만 사용 가능합니다."
                                 })
 
     password1 = forms.CharField(max_length=16,
