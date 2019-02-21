@@ -25,7 +25,7 @@ SECRET_KEY = '%cqzg3vry%o@42a0r1912_3=23s=fpxuhq2ve#3ydfz05+g*d3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -116,8 +116,8 @@ SOCIAL_AUTH_URL_NAMESPACE ='social'
 
 SOCIAL_AUTH_LOGIN_REDIRECT_URL ='/'
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '44110419367-68o4o1l9knsm6l4nnqresel1dbg02q7b.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'hZv2dTc8mIbjBHOWflvJmERj'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
