@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home',
     'account',
     'social_django',
+    'calculator',
 ]
 
 MIDDLEWARE = [
